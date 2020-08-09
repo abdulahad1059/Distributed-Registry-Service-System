@@ -1,0 +1,25 @@
+{
+  "name": ["add",
+  "sub",
+  "mul",
+  "is_even",
+  "find_count"
+  ],
+  "allServices": [
+    {
+      "name": "add",
+      "parameters": ["int", "int"],
+      "returnType": ["int"]
+    },
+    {
+      "name": "sub",
+      "parameters": ["int", "int"],
+      "returnType": ["int"]
+    },
+    {
+      "name": "mul",
+      "parameters": ["int", "int"],
+      "returnType": ["int"]
+    }
+  ]
+}
