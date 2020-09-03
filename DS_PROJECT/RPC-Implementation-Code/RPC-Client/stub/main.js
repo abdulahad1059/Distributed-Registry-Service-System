@@ -144,18 +144,12 @@ let argValues = Array.prototype.slice.call(arguments);
   let xdrDataValues = marshallValue(procedure, argTypes, argValues, returnType);
   let result = rpcCall(xdrData, xdrDataValues);
 
-  result.then(() => {
-    let requestID = serviceRequestStatus.services[procedure];
-
+  let requestID = serviceRequestStatus.services[procedure];
     requestID+= 1;
     serviceRequestStatus.services[procedure] = requestID;
     serviceRequestStatus.ip = clientIP;
-
     fs.writeFileSync('../request.json', JSON.stringify(serviceRequestStatus), (err, res) => {
-
     });
-  });
-
   return result;
 }
 
